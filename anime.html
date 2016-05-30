@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title></title>
+  <style>
+    #square{
+      height: 200px;
+      width: 200px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div id = "square">
+
+  </div>
+  <script>
+    (function(d){
+      var square = d.getElementById("square");
+      square.style.transition = 'all 2s';
+      var squarePeri = square.getBoundingClientRect();
+      console.log(squarePeri);
+      square.style.backgroundColor = "green";
+      square.style.transform = "scale(2)";
+    })(document);
+  </script>
+</body>
+</html>
