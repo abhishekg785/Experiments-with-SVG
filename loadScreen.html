@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>SVG LOAD SCREEN</title>
+  <style>
+    body{
+      background-color: black;
+    }
+  </style>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+  <object type="image/svg+xml" data = "images/home.svg" height="100%" width = "100%" id = "loaderSVG"></object>
+  <script>
+  window.onload=function() {
+  var object = document.getElementById("loaderSVG");
+  var svgDocument = object.contentDocument;
+  console.log(svgDocument);
+  var rightHead = svgDocument.getElementById("logo");
+  };
+  /*
+    (function($,d,w,t,dO){
+      $(w).on('load',function(){
+        var element = this;
+        var dl = $("#rightHead");
+        console.log(dl);
+            HomeSVG = $("#loaderSVG",this);
+            SVGDoc = HomeSVG.contentDocument;
+            rightHead = $("#RightHead",SVGDoc);
+        console.log(rightHead);
+      });
+    })(jQuery,document,window,TweenMax,jQuery(document));
+    */
+  </script>
+</body>
+</html>

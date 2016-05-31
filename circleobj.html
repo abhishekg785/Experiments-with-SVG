@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+  <script src="images/jquery.js"></script>
+</head>
+<body>
+  <object type = "image/svg+xml" data = "images/circle.svg" height="50%" width="50%" id = "circleSVG"></object>
+  <script>
+    // (function($,d,w,wO,dO,t){
+    //   $(d).on('load',function(){
+    //     var ellipseSVG = $("#circleSVG");
+    //     $(ellipseSVG).on('load',function(){
+    //       console.log('cdjcjbdjckd');
+    //     });
+    //   });
+    // })(jQuery,document,window,TweenMax);
+    var circleSVG = document.getElementById('circleSVG');
+    var SVGDoc;
+    circleSVG.addEventListener('load',function(){
+      SVGDoc = circleSVG.contentDocument;
+      var ellipse = SVGDoc.getElementById("ellipse");
+      ellipse.style.fill = "none";
+      ellipse.style.stroke = "black";
+      ellipse.style.strokeWidth = "4";
+      TweenMax.to(ellipse,2,{scale:2,ease:Bounce.easeOut,transformOrigin:"50% 50%"});
+    });
+  </script>
+</body>
+</html>
